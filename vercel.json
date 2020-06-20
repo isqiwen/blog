@@ -1,6 +1,6 @@
 {
   "env": {
-    "FIREBASE_PRIVATE_KEY": "@blog-firebase-private-key"
+    "FIREBASE_PRIVATE_KEY": "development"
   },
   "routes": [
     {

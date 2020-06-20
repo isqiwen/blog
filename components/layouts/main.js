@@ -12,7 +12,7 @@ export default ({ children, headerActive }) => {
     <main>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Guillermo Rauch's blog</title>
+        <title>Wang QiWen's blog</title>
       </Head>
 
       <style jsx global>

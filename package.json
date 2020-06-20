@@ -1,6 +1,6 @@
 {
-  "name": "rauchg-blog",
-  "description": "rauchg.com (blog)",
+  "name": "wangqiwen-blog",
+  "description": "wangqiwen.xyz (blog)",
   "dependencies": {
     "@github/details-dialog-element": "^3.0.13",
     "@mapbox/rehype-prism": "^0.4.0",
