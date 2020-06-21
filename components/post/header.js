@@ -32,11 +32,11 @@ export default ({
         <span className="meta">
           <a
             className="author"
-            href="https://twitter.com/rauchg"
+            href="https://twitter.com/QiwenWang1"
             target="_blank"
           >
             <img src="https://pbs.twimg.com/profile_images/1029230542716264448/LgLb--Of_200x200.jpg" />
-            rauchg
+            Wang QiWen
           </a>
 
           {isMounted ? (
