@@ -18,8 +18,10 @@ rootPath="${scriptsPath}/.."
 
 python3 -m pip install virtualenv -i https://pypi.tuna.tsinghua.edu.cn/simple
 
-echo "Deleting the old virtual environment(${rootPath}/.pyvenv)..."
-rm -rf virtualenv ${rootPath}/.pyvenv
+if [ -d "${rootPath}/.pyvenv" ]; then
+    echo "Deleting the old virtual environment(${rootPath}/.pyvenv)..."
+    rm -rf virtualenv ${rootPath}/.pyvenv
+fi
 
 virtualenv ${rootPath}/.pyvenv
 ${rootPath}/.pyvenv/bin/python -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple
