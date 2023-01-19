@@ -6,6 +6,8 @@ if [[ -f /etc/arch-release ]]; then
     yay -Sy --needed nodejs
 elif [[ -f /etc/debian_version ]]; then
     sudo apt install -y nodejs
+elif [[ -f /etc/redhat-release ]]; then
+    yum install -y nodejs
 else
     echo "Unsupported OS"
 fi
