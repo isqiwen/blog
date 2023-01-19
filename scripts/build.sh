@@ -11,7 +11,13 @@ else
 fi
 
 scriptsPath=$(dirname $(readlink -f $0))
+rootPath="${scriptsPath}/.."
 
-pip install pynecone-io
-pip install -r ${scriptsPath}/../requirements.txt
+python3 -m pip install virtualenv -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+virtualenv ${rootPath}/.pyvenv
+${rootPath}/.pyvenv/bin/python -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple
+${rootPath}/.pyvenv/bin/python -m pip install -r ${rootPath}/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+source ${rootPath}/.pyvenv/bin/activate
 pc init
