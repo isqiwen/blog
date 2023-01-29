@@ -8,7 +8,7 @@ elif [[ -f /etc/debian_version ]]; then
     sudo apt install -y nodejs
 elif [[ -f /etc/redhat-release ]]; then
     sudo dnf makecache
-    sudo dnf install nodejs
+    sudo dnf module install nodejs:12
 else
     echo "Unsupported OS"
 fi
