@@ -23,7 +23,7 @@ if [ -d "${rootPath}/.pyvenv" ]; then
     rm -rf virtualenv ${rootPath}/.pyvenv
 fi
 
-virtualenv ${rootPath}/.pyvenv --python=python3.10.0
+virtualenv ${rootPath}/.pyvenv --python=python3.10
 ${rootPath}/.pyvenv/bin/python -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple
 ${rootPath}/.pyvenv/bin/python -m pip install -r ${rootPath}/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
