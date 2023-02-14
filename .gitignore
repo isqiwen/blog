@@ -1,7 +1,7 @@
-**/.DS_Store
 **/*.pyc
-dist/*
-examples/
-.web/
-pynecone.db
+**/.DS_Store
+**/*.swp
+**/.web
+**/*.db
 .web
+pynecone.db
