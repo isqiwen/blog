@@ -25,7 +25,7 @@ fi
 
 virtualenv ${rootPath}/.pyvenv --python=python3.10
 ${rootPath}/.pyvenv/bin/python -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple
-${rootPath}/.pyvenv/bin/python -m pip install -r ${rootPath}/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+${rootPath}/.pyvenv/bin/python -m pip install -r ${rootPath}/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple --no-warn-script-location
 
 source ${rootPath}/.pyvenv/bin/activate
 pc init
