@@ -6,9 +6,11 @@ if [[ -f /etc/arch-release ]]; then
     yay -Sy --needed nodejs
 elif [[ -f /etc/debian_version ]]; then
     sudo apt install -y nodejs
+    sudo apt-get install libpq-dev python3-dev
 elif [[ -f /etc/redhat-release ]]; then
     sudo dnf makecache
     sudo dnf module install nodejs:12
+    sudo yum install libpq-devel python3-devel
 else
     echo "Unsupported OS"
 fi
