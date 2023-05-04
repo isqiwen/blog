@@ -235,7 +235,7 @@ def navbar(sidebar: pc.Component = None) -> pc.Component:
                 ),
                 pc.mobile_and_tablet(
                     pc.icon(
-                        tag="HamburgerIcon",
+                        tag="hamburger",
                         on_click=NavbarState.toggle_sidebar,
                         width="1.5em",
                         height="1.5em",
@@ -253,7 +253,7 @@ def navbar(sidebar: pc.Component = None) -> pc.Component:
                         pc.hstack(
                             logo,
                             pc.icon(
-                                tag="CloseIcon",
+                                tag="close",
                                 on_click=NavbarState.toggle_sidebar,
                                 width="4em",
                                 _hover={

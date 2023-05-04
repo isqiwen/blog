@@ -1,16 +1,15 @@
-
-import pynecone as pc
-
-from blog.base_state import State
-from blog import styles
-from blog.pages import routes
-
-
 """The wangqiwen.xyz blog website"""
 
 
-# from pcweb.pages import routes
-# from pcweb.pages.docs.component import multi_docs
+import pynecone as pc
+
+from blog import styles
+from blog.base_state import State
+from blog.component_list import component_list
+from blog.middleware import CloseSidebarMiddleware
+from blog.pages import routes
+# from blog.pages.docs.component import multi_docs
+
 
 # Create the app.
 app = pc.App(
@@ -28,6 +27,18 @@ for route in routes:
         description="Write web apps in pure Python. Deploy in minutes.",
         image="preview.png",
     )
+
+# for key in component_list:
+#     for component_group in component_list[key]:
+#         path = f"/docs/library/{key.lower()}/{component_group[0].__name__.lower()}"
+#         app.add_page(
+#             multi_docs(path=path, component_list=component_group).component,
+#             route=path,
+#             title=f"{component_group[0].__name__} | Pynecone",
+#         )
+
+# Add the middleware.
+app.add_middleware(CloseSidebarMiddleware(), index=0)
 
 # Run the app.
 app.compile()
